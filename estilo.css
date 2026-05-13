@@ -1,0 +1,74 @@
+:root {
+            --primary-color: #210000;
+            --hover-color: #3d0101;
+            --text-color: #ffffff;
+            --bg-color: #eeeeee;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .nav-container {
+            background: white;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+
+        .menu {
+            display: flex;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            gap: 15px;
+        }
+
+        /* Estilos de los botones del menú */
+        .menu-item a {
+            display: inline-block;
+            text-decoration: none;
+            color: var(--text-color);
+            background-color: var(--primary-color);
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            font-size: 14px;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            border: 2px solid transparent;
+            cursor: pointer;
+        }
+
+        /* Efecto Hover */
+        .menu-item a:hover {
+            background-color: var(--hover-color);
+            transform: translateY(-3px);
+            box-shadow: 0 6px 15px rgba(33, 0, 0, 0.3);
+            border-color: rgba(255, 255, 255, 0.1);
+        }
+
+        /* Efecto Active (al hacer clic) */
+        .menu-item a:active {
+            transform: translateY(-1px);
+            box-shadow: 0 2px 8px rgba(33, 0, 0, 0.2);
+        }
+
+        /* Responsive: Diseño vertical en móviles */
+        @media (max-width: 600px) {
+            .menu {
+                flex-direction: column;
+                align-items: stretch;
+            }
+            
+            .menu-item a {
+                text-align: center;
+            }
+        }
